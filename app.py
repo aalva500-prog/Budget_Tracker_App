@@ -8,7 +8,7 @@ import main_functions
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = "COP4813@#"
+app.config["SECRET_KEY"] = "your-secret-key-goes-here"
 
 app.config["MONGO_URI"] = "mongodb+srv://aaron:900908Aa#@cluster0.u0hsx.mongodb.net/" \
                           "db?retryWrites=true&w=majority"
@@ -46,7 +46,7 @@ def get_expenses_by_category(category):
 
 def currency_converter(cost, currency):
     # Extract information from API using the topic selected and the API_key
-    url = "http://api.currencylayer.com/live?access_key=0969d38270dc9b999b501b180e67f8e5" \
+    url = "http://api.currencylayer.com/live?access_key=your-api-key-goes-here" \
           "&currencies=BTC,BRL,CAD,COP,EUR,GBP"
     # Make the request
     response = requests.get(url).json()
